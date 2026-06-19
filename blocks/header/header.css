@@ -1,9 +1,11 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background: linear-gradient(135deg, #6a0dad 0%, #9370db 100%);
   width: 100%;
   z-index: 2;
   position: fixed;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header nav {

@@ -284,14 +284,20 @@ button.button.accent:disabled:focus-visible {
 main > .section:first-of-type {
   background: linear-gradient(135deg, #6a0dad 0%, #9370db 100%);
   color: white;
-  padding: 80px 0;
+  padding: 120px 0;
   text-align: center;
+  margin-top: 0;
 }
 
 main > .section:first-of-type h1 {
   color: white;
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
+}
+
+main > .section:first-of-type h2 {
+  color: white;
+  font-size: 2rem;
 }
 
 main > .section:first-of-type p {
@@ -299,6 +305,26 @@ main > .section:first-of-type p {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Fix header spacing */
+header {
+  height: var(--nav-height);
+}
+
+/* Make header links white */
+header nav a:any-link {
+  color: white;
+}
+
+/* Make footer links white */
+footer a:any-link {
+  color: white;
+}
+
+footer a:hover {
+  color: #f0e6ff;
+  text-decoration: underline;
 }
 
 main img {

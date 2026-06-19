@@ -1,5 +1,6 @@
 footer {
-  background-color: var(--light-color);
+  background: linear-gradient(135deg, #9370db 0%, #6a0dad 100%);
+  color: white;
   font-size: var(--body-font-size-xs);
 }
 
