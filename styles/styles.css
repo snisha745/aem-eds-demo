@@ -283,34 +283,31 @@ button.button.accent:disabled:focus-visible {
 
 /* Custom styles for Nisha's site */
 main > .section:first-of-type {
-  background: linear-gradient(135deg, #6a0dad 0%, #9370db 100%);
-  color: white;
-  padding: 120px 0;
+  background: linear-gradient(180deg, #f8f4ff 0%, #ffffff 100%);
+  color: var(--text-color);
+  padding: 60px 0;
   text-align: center;
   margin-top: 0;
 }
 
 main > .section:first-of-type h1 {
-  color: white;
-  font-size: 3.5rem;
+  color: var(--primary-color);
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 main > .section:first-of-type h2 {
-  color: white;
-  font-size: 2rem;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  opacity: 0.8;
 }
 
 main > .section:first-of-type p {
   font-size: 1.25rem;
-  max-width: 600px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* Fix header spacing */
-header {
-  height: var(--nav-height);
+  color: #555;
 }
 
 /* Make header links white */

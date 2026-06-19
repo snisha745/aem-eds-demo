@@ -3,14 +3,10 @@ header .nav-wrapper {
   background: linear-gradient(135deg, #6a0dad 0%, #9370db 100%);
   width: 100%;
   z-index: 2;
-  position: fixed;
+  position: relative;
   color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 1400px;
-  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 20px rgba(106, 13, 173, 0.2);
+  border-radius: 0 0 30px 30px;
 }
 
 header nav {
