@@ -75,11 +75,12 @@
 body {
   display: none;
   margin: 0;
-  background-color: var(--background-color);
+  background: linear-gradient(180deg, #f8f4ff 0%, var(--background-color) 100%);
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 body.appear {
