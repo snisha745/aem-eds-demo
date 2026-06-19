@@ -256,8 +256,8 @@ button.button.secondary:disabled:focus-visible {
 /* high-impact call-to-action */
 a.button.accent,
 button.button.accent {
-  border-color: var(--link-color);
-  background-color: var(--link-color);
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
   color: var(--background-color);
 }
 
@@ -278,6 +278,27 @@ button.button.accent:disabled:focus-visible {
   background-color: var(--light-color);
   border-color: var(--light-color);
   color: var(--dark-color);
+}
+
+/* Custom styles for Nisha's site */
+main > .section:first-of-type {
+  background: linear-gradient(135deg, #6a0dad 0%, #9370db 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+main > .section:first-of-type h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+main > .section:first-of-type p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main img {
