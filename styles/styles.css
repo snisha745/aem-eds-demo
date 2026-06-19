@@ -39,7 +39,7 @@
   --heading-font-size-xs: 22px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 80px;
 }
 
 /* fallback fonts */
@@ -285,7 +285,7 @@ button.button.accent:disabled:focus-visible {
 main > .section:first-of-type {
   background: linear-gradient(180deg, #f8f4ff 0%, #ffffff 100%);
   color: var(--text-color);
-  padding: 60px 0;
+  padding: 100px 0 60px 0;
   text-align: center;
   margin-top: 0;
 }
