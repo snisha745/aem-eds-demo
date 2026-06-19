@@ -1,21 +1,26 @@
 footer {
-  background: linear-gradient(135deg, #9370db 0%, #6a0dad 100%);
+  background: linear-gradient(135deg, #4361ee 0%, #4cc9f0 100%);
   color: white;
   font-size: var(--body-font-size-xs);
 }
 
 footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 40px 32px;
 }
 
-footer .footer p {
-  margin: 0;
+footer a:any-link {
+  color: white;
+}
+
+footer a:hover {
+  color: #e0f4ff;
+  text-decoration: underline;
 }
 
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: 40px 32px;
   }
 }

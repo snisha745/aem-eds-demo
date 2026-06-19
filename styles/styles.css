@@ -16,10 +16,10 @@
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #131313;
-  --link-color: #6a0dad;
-  --link-hover-color: #4b0082;
-  --primary-color: #6a0dad;
-  --secondary-color: #9370db;
+  --link-color: #4361ee;
+  --link-hover-color: #3a56d4;
+  --primary-color: #4361ee;
+  --secondary-color: #4cc9f0;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -39,7 +39,7 @@
   --heading-font-size-xs: 22px;
 
   /* nav height */
-  --nav-height: 80px;
+  --nav-height: 200px;
 }
 
 /* fallback fonts */
@@ -75,7 +75,7 @@
 body {
   display: none;
   margin: 0;
-  background: linear-gradient(180deg, #f8f4ff 0%, var(--background-color) 100%);
+  background: linear-gradient(180deg, #e0f4ff 0%, var(--background-color) 100%);
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
@@ -283,9 +283,9 @@ button.button.accent:disabled:focus-visible {
 
 /* Custom styles for Nisha's site */
 main > .section:first-of-type {
-  background: linear-gradient(180deg, #f8f4ff 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #e0f4ff 0%, #ffffff 100%);
   color: var(--text-color);
-  padding: 100px 0 60px 0;
+  padding: 80px 0 60px 0;
   text-align: center;
   margin-top: 0;
 }
@@ -315,16 +315,6 @@ header nav a:any-link {
   color: white;
 }
 
-/* Make footer links white */
-footer a:any-link {
-  color: white;
-}
-
-footer a:hover {
-  color: #f0e6ff;
-  text-decoration: underline;
-}
-
 main img {
   max-width: 100%;
   width: auto;
@@ -349,7 +339,7 @@ main > .section {
 
 main > .section > div {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 24px;
 }
 

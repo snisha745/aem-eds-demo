@@ -1,47 +1,40 @@
 /* ==========================================
    HEADER WRAPPER
 ========================================== */
-
 header .nav-wrapper {
-  background: linear-gradient(
-    135deg,
-    #6a0dad 0%,
-    #7b2cbf 50%,
-    #9d4edd 100%
-  );
-  position: sticky;
-  top: 0;
+  background: linear-gradient(135deg, #4cc9f0 0%, #4361ee 100%);
+  position: relative;
   z-index: 1000;
-  box-shadow: 0 8px 30px rgba(106, 13, 173, 0.2);
+  box-shadow: 0 4px 20px rgba(67, 97, 238, 0.3);
   border-radius: 0 0 20px 20px;
 }
 
 /* ==========================================
    NAVIGATION
 ========================================== */
-
 header nav {
   box-sizing: border-box;
   max-width: 1280px;
   margin: 0 auto;
-  height: 80px;
-  padding: 0 32px;
+  min-height: 200px;
+  padding: 24px 32px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   color: white;
 }
 
 /* ==========================================
    BRAND
 ========================================== */
-
 header .nav-brand {
   flex-shrink: 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 800;
   letter-spacing: -0.5px;
   white-space: nowrap;
+  margin-bottom: 24px;
 }
 
 header .nav-brand a {
@@ -58,17 +51,20 @@ header .nav-brand img {
 /* ==========================================
    NAV SECTIONS
 ========================================== */
-
 header nav .nav-sections {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   visibility: visible;
+  width: 100%;
 }
 
 header nav .nav-sections ul {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 16px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -76,175 +72,39 @@ header nav .nav-sections ul {
 
 header nav .nav-sections li {
   position: relative;
+  width: 100%;
+  text-align: center;
 }
 
 header nav .nav-sections a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 15px;
-  font-weight: 500;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
   transition: all 0.3s ease;
   position: relative;
-}
-
-/* Hover underline animation */
-
-header nav .nav-sections a::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: white;
-  transition: width 0.3s ease;
+  padding: 12px 24px;
+  border-radius: 12px;
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  min-width: 200px;
 }
 
 header nav .nav-sections a:hover {
-  color: white;
-}
-
-header nav .nav-sections a:hover::after {
-  width: 100%;
-}
-
-/* ==========================================
-   DROPDOWNS
-========================================== */
-
-header nav .nav-sections .nav-drop {
-  cursor: pointer;
-  padding-right: 16px;
-}
-
-header nav .nav-sections .nav-drop::before {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 8px;
-  width: 6px;
-  height: 6px;
-  border-right: 2px solid white;
-  border-bottom: 2px solid white;
-  transform: rotate(45deg);
-  transition: transform 0.3s ease;
-}
-
-header nav .nav-sections .nav-drop[aria-expanded='true']::before {
-  transform: rotate(-135deg);
-  top: 12px;
-}
-
-header nav .nav-sections .default-content-wrapper > ul > li > ul {
-  display: none;
-}
-
-header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
-  display: block;
-  position: absolute;
-  top: 140%;
-  left: 0;
-  min-width: 220px;
-  background: white;
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-}
-
-header nav .nav-sections .default-content-wrapper > ul > li > ul li {
-  padding: 10px;
-}
-
-header nav .nav-sections .default-content-wrapper > ul > li > ul a {
-  color: #333;
-}
-
-header nav .nav-sections .default-content-wrapper > ul > li > ul a:hover {
-  color: #6a0dad;
-}
-
-/* ==========================================
-   CONTACT BUTTON
-========================================== */
-
-header nav .nav-sections ul li:last-child a {
-  background: white;
-  color: #6a0dad;
-  padding: 10px 20px;
-  border-radius: 999px;
-  font-weight: 600;
-}
-
-header nav .nav-sections ul li:last-child a:hover {
+  background: rgba(255,255,255,0.3);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
-}
-
-header nav .nav-sections ul li:last-child a::after {
-  display: none;
 }
 
 /* ==========================================
-   HAMBURGER
+   HAMBURGER (HIDE ON DESKTOP)
 ========================================== */
-
 header nav .nav-hamburger {
   display: none;
-}
-
-header nav .nav-hamburger button {
-  background: transparent;
-  border: none;
-  color: white;
 }
 
 /* ==========================================
    TOOLS
 ========================================== */
-
 header nav .nav-tools {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-/* ==========================================
-   MOBILE
-========================================== */
-
-@media (max-width: 899px) {
-  header nav {
-    display: grid;
-    grid-template:
-      'hamburger brand' auto
-      'sections sections' auto;
-    padding: 16px;
-    height: auto;
-  }
-
-  header nav .nav-hamburger {
-    display: flex;
-    align-items: center;
-  }
-
-  header nav .nav-sections {
-    display: none;
-    margin-top: 20px;
-  }
-
-  header nav[aria-expanded='true'] .nav-sections {
-    display: block;
-  }
-
-  header nav .nav-sections ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-
-  header nav .nav-sections ul li:last-child a {
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-  }
+  display: none;
 }
