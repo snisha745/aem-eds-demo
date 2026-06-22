@@ -88,7 +88,7 @@ body.appear {
 }
 
 header {
-  height: var(--nav-height);
+  /* height: var(--nav-height); */
 }
 
 header .header,
@@ -349,7 +349,10 @@ main > .section:first-of-type {
 
 @media (width >= 900px) {
   main > .section > div {
-    padding: 0 32px;
+    /* padding: 0 32px;
+    padding-top: 6rem; */
+    /* padding: 8rem; */
+    /* padding: 6rem 32px 0; */
   }
 }
 
