@@ -2,7 +2,7 @@
    HEADER WRAPPER
 ========================================== */
 header .nav-wrapper {
-  background: linear-gradient(135deg, #4cc9f0 0%, #4361ee 100%);
+  background: linear-gradient(135deg, #313d73 100%);
   box-shadow: 0 4px 20px rgb(67 97 238 / 20%);
   position: sticky;
   top: 0;
