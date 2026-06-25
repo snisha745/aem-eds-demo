@@ -14,8 +14,8 @@ main .section-wrapper > .section.hero-banner-container {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start; /* Align content to the left */
+  text-align: left; /* Left-align text */
   overflow: hidden;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
@@ -58,6 +58,7 @@ main .section-wrapper > .section.hero-banner-container {
   z-index: 3;
   max-width: 1200px;
   padding: 40px 24px;
+  padding-left: 80px; /* Add more left padding */
   color: white;
 }
 
