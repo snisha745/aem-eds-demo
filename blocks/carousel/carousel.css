@@ -1,6 +1,8 @@
 .carousel {
   position: relative;
   width: 100%;
+  max-width: 1200px; /* Max width for professional look */
+  margin: 0 auto; /* Center the carousel */
   overflow: hidden;
 }
 
@@ -22,48 +24,83 @@
 
 .carousel-slide.active {
   opacity: 1;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image container for clean display */
+.carousel-slide picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #f8f8f8; /* Light background to fill space */
 }
 
 .carousel-slide picture img {
   width: 100%;
+  max-width: 100%;
   height: auto;
-  /* Show full image without cropping! */
-  object-fit: contain;
-  max-height: 80vh; /* Use viewport height instead of fixed pixels */
+  max-height: 70vh; /* Responsive height */
+  object-fit: contain; /* Show full image without cropping */
 }
 
+/* Clean text styling - no weird effects! */
+.carousel-slide div {
+  padding: 24px 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.carousel-slide h3 {
+  font-size: 1.75rem;
+  margin: 0 0 12px 0;
+  color: var(--text-color);
+  /* No text shadow or weird effects */
+}
+
+.carousel-slide p {
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--text-color);
+  opacity: 0.85;
+}
+
+/* Navigation buttons */
 .carousel-prev,
 .carousel-next {
   position: absolute;
-  top: 50%;
+  top: 35%; /* Position on image area, not too low */
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
-  padding: 16px;
+  padding: 12px 16px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 20px;
   z-index: 10;
   transition: background-color 0.3s ease;
+  border-radius: 4px;
 }
 
 .carousel-prev:hover,
 .carousel-next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .carousel-prev {
-  left: 16px;
+  left: 8px;
 }
 
 .carousel-next {
-  right: 16px;
+  right: 8px;
 }
 
+/* Indicators */
 .carousel-indicators {
   position: absolute;
-  bottom: 16px;
+  bottom: 120px; /* Position above text */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -72,23 +109,44 @@
 }
 
 .carousel-indicators button {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .carousel-indicators button.active {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Desktop styling */
 @media (width >= 900px) {
+  .carousel {
+    max-width: 1400px;
+  }
+  
   .carousel-prev,
   .carousel-next {
-    padding: 24px;
-    font-size: 32px;
+    padding: 16px 20px;
+    font-size: 24px;
+  }
+  
+  .carousel-prev {
+    left: 16px;
+  }
+  
+  .carousel-next {
+    right: 16px;
+  }
+  
+  .carousel-slide h3 {
+    font-size: 2rem;
+  }
+  
+  .carousel-slide p {
+    font-size: 1.25rem;
   }
 }
