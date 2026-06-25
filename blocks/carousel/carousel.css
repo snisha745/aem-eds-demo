@@ -28,8 +28,9 @@
 .carousel-slide picture img {
   width: 100%;
   height: auto;
-  max-height: 600px;
-  object-fit: cover;
+  /* Show full image without cropping! */
+  object-fit: contain;
+  max-height: 80vh; /* Use viewport height instead of fixed pixels */
 }
 
 .carousel-prev,
