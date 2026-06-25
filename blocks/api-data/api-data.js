@@ -1,14 +1,10 @@
-// Simple API data block - loads and displays real API data!
 export default async function decorate(block) {
-  // First, show loading state to user while we fetch data
   block.innerHTML = '<p style="text-align: center; font-size: 1.2rem; padding: 2rem;">Loading data...</p>';
 
   try {
-    // Fetch real data from a free JSON API - JSONPlaceholder!
     const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=6');
     const posts = await response.json();
 
-    // Now build HTML to display this data nicely!
     let html = `
       <h2 style="text-align: center; margin-bottom: 2.5rem;">Latest Blog Posts</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
