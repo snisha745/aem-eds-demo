@@ -1,4 +1,4 @@
-// Hero block decoration
+// Hero Banner block decoration
 export default function decorate(block) {
   // First, make a SAFE copy of everything we need BEFORE modifying DOM!
   const originalHTML = block.innerHTML;
@@ -43,7 +43,7 @@ export default function decorate(block) {
   }
   
   const contentWrapper = document.createElement('div');
-  contentWrapper.className = 'hero-content';
+  contentWrapper.className = 'hero-banner-content';
   
   if (title) {
     const h1 = document.createElement('h1');
