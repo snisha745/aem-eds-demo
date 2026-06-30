@@ -112,7 +112,7 @@ h6 {
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
-  scroll-margin: 120px; /* Account for sticky header */
+  scroll-margin: 40px;
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
@@ -143,10 +143,6 @@ pre {
   background-color: var(--light-color);
   overflow-x: auto;
   white-space: pre;
-}
-
-main {
-  padding-top: 80px; /* Space for the sticky header */
 }
 
 main > div {
@@ -207,7 +203,7 @@ button.button:disabled {
 a.button.primary,
 button.button.primary {
   border-color: var(--text-color);
-  background-color: #25365e;
+  background-color: #25365e;;
   color: var(--background-color);
 }
 
@@ -289,13 +285,13 @@ button.button.accent:disabled:focus-visible {
 main > .section:first-of-type {
   background: linear-gradient(180deg, #e0f4ff 0%, #ffffff 100%);
   color: var(--text-color);
-  /* padding: 80px 0 60px 0; */
+  padding: 80px 0 60px 0;
   text-align: center;
   margin-top: 0;
 }
 
 main > .section:first-of-type h1 {
-  color:#25365e;
+  color: #25365e;
   font-size: 3rem;
   margin-bottom: 1rem;
 }
@@ -356,7 +352,7 @@ main > .section:first-of-type {
     /* padding: 0 32px;
     padding-top: 6rem; */
     /* padding: 8rem; */
-    /* padding: 4rem 32px; */
+    padding: 4rem 32px;
   }
 }
 
