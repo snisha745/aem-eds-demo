@@ -1,0 +1,86 @@
+.flower-order {
+  background: #f8f8f8;
+  padding: 4rem 24px;
+}
+
+.flower-order .form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.flower-order h2 {
+  text-align: center;
+  color: #25365e;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.flower-order .form-container > p {
+  text-align: center;
+  color: #505050;
+  margin-bottom: 2rem;
+}
+
+.flower-order .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.flower-order label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #25365e;
+  font-size: 0.95rem;
+}
+
+.flower-order input,
+.flower-order select,
+.flower-order textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.flower-order input:focus,
+.flower-order select:focus,
+.flower-order textarea:focus {
+  outline: none;
+  border-color: #4361ee;
+}
+
+.flower-order .submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #4361ee;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.flower-order .submit-btn:hover {
+  background: #3a56d4;
+}
+
+/* Desktop styles */
+@media (width >= 900px) {
+  .flower-order {
+    padding: 5rem 32px;
+  }
+  
+  .flower-order h2 {
+    font-size: 2.5rem;
+  }
+}
