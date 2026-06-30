@@ -1,39 +1,54 @@
-/* Professional Footer */
+/* Professional Footer - Override all defaults */
 footer {
-  background: #182240;
-  color: white;
-  font-size: 0.92rem;
-  line-height: 1.8;
+  background: #182240 !important;
+  color: white !important;
+  font-size: 0.92rem !important;
+  line-height: 1.8 !important;
 }
 
 footer .footer {
-  padding: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
 }
 
 footer .footer > div {
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 4rem 24px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
+  margin: 0 auto !important;
+  max-width: 1280px !important;
+  padding: 4rem 24px !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 3rem !important;
+  background: transparent !important;
+}
+
+/* Override default content wrapper */
+footer .footer .default-content-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+footer .footer .section {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* Footer Brand Section */
 footer .footer > div > div:first-child h4,
 footer .footer > div > div:first-child h3,
 footer .footer > div > div:first-child h2,
-footer .footer > div > div:first-child h1 {
-  color: white;
-  font-size: 1.4rem;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
+footer .footer > div > div:first-child h1,
+footer .footer > div > div:first-child strong {
+  color: white !important;
+  font-size: 1.4rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.75rem !important;
+  line-height: 1.2 !important;
 }
 
 footer .footer > div > div:first-child p {
-  margin: 0.5rem 0;
-  color: rgba(255, 255, 255, 0.85);
+  margin: 0.5rem 0 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 
 /* Footer Links Sections */
@@ -41,63 +56,63 @@ footer .footer > div > div:not(:first-child) h4,
 footer .footer > div > div:not(:first-child) h3,
 footer .footer > div > div:not(:first-child) h2,
 footer .footer > div > div:not(:first-child) strong {
-  color: white;
-  font-size: 1rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  display: block;
-  font-weight: 600;
+  color: white !important;
+  font-size: 1rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  display: block !important;
+  font-weight: 600 !important;
 }
 
 footer .footer > div > div:not(:first-child) ul,
 footer .footer > div > div:not(:first-child) {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 footer .footer > div > div:not(:first-child) li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem !important;
 }
 
 footer a:any-link {
-  color: rgba(255, 255, 255, 0.85);
-  text-decoration: none;
-  transition: color 0.2s ease;
+  color: rgba(255, 255, 255, 0.85) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
 }
 
 footer a:hover {
-  color: white;
-  text-decoration: underline;
+  color: white !important;
+  text-decoration: underline !important;
 }
 
 /* Footer Bottom Copyright Section */
 footer .footer > div > div:last-child {
-  grid-column: 1 / -1;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
+  grid-column: 1 / -1 !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+  margin-top: 1rem !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+  gap: 1rem !important;
 }
 
 footer .footer > div > div:last-child p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.75);
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 /* Desktop Layout */
 @media (width >= 768px) {
   footer .footer > div {
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 2fr 1fr 1fr !important;
+    gap: 2rem !important;
   }
 }
 
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 4.5rem 32px;
+    padding: 4.5rem 32px !important;
   }
 }
