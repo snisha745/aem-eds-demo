@@ -112,7 +112,7 @@ h6 {
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
-  scroll-margin: 40px;
+  scroll-margin: 120px; /* Account for sticky header */
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
@@ -143,6 +143,10 @@ pre {
   background-color: var(--light-color);
   overflow-x: auto;
   white-space: pre;
+}
+
+main {
+  padding-top: 80px; /* Space for the sticky header */
 }
 
 main > div {
