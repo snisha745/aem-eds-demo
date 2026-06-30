@@ -54,9 +54,9 @@ export default function decorate(block) {
         <button type="submit" class="submit-btn">Place Order</button>
       </form>
       
-      <div class="success-message" style="display: none; text-align: center; padding: 2rem; background: #e6f7e6; border-radius: 8px; margin-top: 1rem;">
-        <h3 style="color: #138c13; margin-top: 0;">Thank You!</h3>
-        <p style="color: #505050;">Your order has been received! We'll contact you soon!</p>
+      <div class="success-message" style="display: none;">
+        <h3>Thank You!</h3>
+        <p>Your order has been received! We'll contact you soon!</p>
       </div>
     </div>
   `;
