@@ -191,3 +191,20 @@ async function loadPage() {
 }
 
 loadPage();
+
+// Redirect Flower Order nav link to the correct page!
+document.addEventListener('click', (event) => {
+  const target = event.target.closest('a');
+  if (target) {
+    const linkText = target.textContent.trim().toLowerCase();
+    const linkHref = target.getAttribute('href');
+    if (
+      linkText.includes('flower order') ||
+      linkHref === '#' ||
+      linkHref.includes('flower-order')
+    ) {
+      event.preventDefault();
+      window.location.href = '/flower-order';
+    }
+  }
+});
