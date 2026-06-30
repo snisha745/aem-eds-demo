@@ -165,8 +165,26 @@ async function loadLazy(doc) {
   await loadSections(main);
 
   const { hash } = window.location;
-  const element = hash ? doc.getElementById(hash.substring(1)) : false;
-  if (hash && element) element.scrollIntoView();
+  if (hash) {
+    const element = doc.getElementById(hash.substring(1));
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // If no element found by id, try to find the corresponding block
+      if (hash === '#services') {
+        const cardsBlock = document.querySelector('.cards.block');
+        if (cardsBlock) {
+          cardsBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+      if (hash === '#about') {
+        const carouselBlock = document.querySelector('.carousel.block');
+        if (carouselBlock) {
+          carouselBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+  }
 
   loadFooter(doc.querySelector('footer'));
 
@@ -202,7 +220,6 @@ document.addEventListener('click', (event) => {
     // Handle Flower Order
     if (
       linkText.includes('flower order') ||
-      linkHref === '#' ||
       linkHref.includes('flower-order')
     ) {
       event.preventDefault();
@@ -216,6 +233,34 @@ document.addEventListener('click', (event) => {
     ) {
       event.preventDefault();
       window.location.href = '/';
+    }
+    
+    // Handle Services - redirect to Cards section on homepage
+    if (linkText.includes('services')) {
+      event.preventDefault();
+      if (window.location.pathname !== '/') {
+        window.location.href = '/#services';
+      } else {
+        // If already on home, scroll to the cards block
+        const cardsBlock = document.querySelector('.cards.block');
+        if (cardsBlock) {
+          cardsBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+    
+    // Handle About - redirect to Carousel section on homepage
+    if (linkText.includes('about')) {
+      event.preventDefault();
+      if (window.location.pathname !== '/') {
+        window.location.href = '/#about';
+      } else {
+        // If already on home, scroll to the carousel block
+        const carouselBlock = document.querySelector('.carousel.block');
+        if (carouselBlock) {
+          carouselBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
     }
   }
 });
