@@ -1,6 +1,6 @@
 // Simple Flower Order Form block!
 export default function decorate(block) {
-  // First, clear any default content from Google Doc table
+  // Always clear any content and just show our form!
   block.innerHTML = '';
 
   // Create the HTML structure for the form
@@ -21,6 +21,11 @@ export default function decorate(block) {
         </div>
         
         <div class="form-group">
+          <label for="address">Delivery Address</label>
+          <input type="text" id="address" name="address" required placeholder="123 Main St, City, Country">
+        </div>
+        
+        <div class="form-group">
           <label for="flowerType">Flower Type</label>
           <select id="flowerType" name="flowerType" required>
             <option value="">Select flowers...</option>
@@ -34,6 +39,11 @@ export default function decorate(block) {
         <div class="form-group">
           <label for="quantity">Quantity</label>
           <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="deliveryDate">Delivery Date</label>
+          <input type="date" id="deliveryDate" name="deliveryDate">
         </div>
         
         <div class="form-group">
@@ -58,6 +68,12 @@ export default function decorate(block) {
   const form = block.querySelector('.flower-form');
   form.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent page reload!
+    
+    // Collect form data to show what was sent
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    console.log('Order Submitted:', data);
+    
     // Hide form, show success message!
     form.style.display = 'none';
     block.querySelector('.success-message').style.display = 'block';
