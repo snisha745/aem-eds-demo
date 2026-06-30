@@ -192,12 +192,14 @@ async function loadPage() {
 
 loadPage();
 
-// Redirect Flower Order nav link to the correct page!
+// Redirect nav links to correct pages!
 document.addEventListener('click', (event) => {
   const target = event.target.closest('a');
   if (target) {
     const linkText = target.textContent.trim().toLowerCase();
     const linkHref = target.getAttribute('href');
+    
+    // Handle Flower Order
     if (
       linkText.includes('flower order') ||
       linkHref === '#' ||
@@ -205,6 +207,15 @@ document.addEventListener('click', (event) => {
     ) {
       event.preventDefault();
       window.location.href = '/flower-order';
+    }
+    
+    // Handle Home
+    if (
+      linkText.includes('home') ||
+      linkHref.includes('example.com')
+    ) {
+      event.preventDefault();
+      window.location.href = '/';
     }
   }
 });
