@@ -1,10 +1,12 @@
 /* ==========================================
-   HEADER - ALWAYS STICKY AT TOP
+   HEADER - ALWAYS STICKY AT TOP - NO GAP
 ========================================== */
 header {
   position: sticky;
   top: 0;
   z-index: 9999;
+  margin: 0;
+  padding: 0;
 }
 
 header .nav-wrapper {
@@ -13,6 +15,8 @@ header .nav-wrapper {
   position: sticky;
   top: 0;
   z-index: 10000;
+  margin: 0;
+  padding: 0;
 }
 
 /* ==========================================
